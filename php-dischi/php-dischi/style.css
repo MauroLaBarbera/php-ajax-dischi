@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #182d3d;
+}
+
+header {
+    background: #132431;
+}
+
+header img {
+    width: 50px;
+}
+
+img {
+    width: 200px;
+    margin: 20px;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+.cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 450px;
+    flex-basis: calc(100% / 3 - 40px);
+    background: #000;
+    color: #fff;
+    margin: 20px;
+}
