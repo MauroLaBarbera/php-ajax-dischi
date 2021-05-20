@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dischi</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./php-dischi/style.css">
+    <!-- VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    
+  <header>
+      <img src="./php-dischi/logo.png" alt="">
+  </header>
+
+  <main>
+  
+      <div class="cards" id="app">
+        
+            <div class="card" v-for="album in albums">
+                <img :src="album.poster" alt="">
+                <h2> {{ album.title }} </h2>
+                <h3> {{ album.author }} </h3>
+                <h3> {{ album.year }} </h3>
+                <h3> {{ album.genre }} </h3>
+            </div>
+                
+        </ul>
+      </div>
+  </main>
+
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
