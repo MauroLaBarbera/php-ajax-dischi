@@ -12,14 +12,27 @@
 </head>
 <body>
     
-  <header>
+<div  id="app">
+  <header >
       <img src="./php-dischi/logo.png" alt="">
+      
+      <div class="select">
+          <label for="albums">Seleziona per artista: </label>
+          <select name="albums" id="type"
+          v-model="filters"
+          @change="getArtist()">
+              <option value="all"
+              >All</option>
+              <option :value="art"
+              v-for="art in artisti"
+              >{{art}}</option>
+          </select>
+      </div>
   </header>
 
   <main>
   
-      <div class="cards" id="app">
-        
+        <div class="cards">
             <div class="card" v-for="album in albums">
                 <img :src="album.poster" alt="">
                 <h2> {{ album.title }} </h2>
@@ -29,10 +42,11 @@
             </div>
                 
         </ul>
-      </div>
-  </main>
-
-
+        </div>
+    </main>
+    
+    
+</div>
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./main.js"></script>
