@@ -26,6 +26,15 @@ h3 {
     margin: 10px 0;
 }
 
+.select {
+    display: flex;
+    justify-content: end;
+    color: white;
+}
+
+label {
+    margin-right: 10px;
+}
 .cards {
     max-width: 1200px;
     margin: 0 auto;
